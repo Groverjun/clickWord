@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p style="">
+			<pre>
+			我慢慢的明白我为什么不快乐，因为我总期待一个结果。 
+			
+			开一本书期待他让我变得深刻， 
+			
+			吃饭游泳期待让我一斤一斤廋下来， 
+			
+			发一条短信期待他被回复， 
+			
+			对人好期待他回应也好， 
+			
+			写一个故事说一个心情期待他被关注被安慰， 
+			
+			参加一个活动期待换来丰富的经历， 
+			
+			这些预设的期待如果实现了，长舒一口气。 
+			
+			如果没实现呢？自怨自艾。 
+			
+			可小时候也是同一个我， 
+			
+			用一个下午的时间看蚂蚁搬家，等石头开花， 
+			
+			小时候不期待结果，小时候哭笑都不打折。
+			
+			——马德《允许自己虚度时光》
+			</pre>
+		</p>
+		<script src="../js/a/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var a_idx = 0;
+			jQuery(document).ready(function($) {
+			 $("body").click(function(e) {
+			 var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善");
+			 var $i = $("<span/>").text(a[a_idx]);
+			 a_idx = (a_idx + 1) % a.length;
+			 var x = e.pageX,
+			 y = e.pageY;
+			 $i.css({
+			 "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+			 "top": y - 20,
+			 "left": x,
+			 "position": "absolute",
+			 "font-weight": "bold",
+			 "color": "#ff6651"
+			 });
+			 $("body").append($i);
+			 $i.animate({
+			 "top": y - 180,
+			 "opacity": 0
+			 },
+			 1500,
+			 function() {
+			 $i.remove();
+			 });
+			 });
+			});
+		</script>
+	</body>
+</html>
